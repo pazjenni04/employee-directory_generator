@@ -1,0 +1,27 @@
+{
+  "name": "employee-directory_generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pazjenni04/employee-directory_generator.git"
+  },
+  "keywords": [],
+  "author": "Jennifer Davila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pazjenni04/employee-directory_generator/issues"
+  },
+  "homepage": "https://github.com/pazjenni04/employee-directory_generator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.1",
+    "jest": "^27.0.6"
+  }
+}
