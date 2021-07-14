@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/pazjenni04/employee-directory_generator#readme",
   "dependencies": {
-    "inquirer": "^8.1.1",
+    "inquirer": "^8.1.1"
+  },
+  "devDependencies": {
     "jest": "^27.0.6"
   }
 }
