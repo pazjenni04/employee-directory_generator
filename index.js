@@ -6,7 +6,7 @@ const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
 const generateTeam = require('./src/page-template');
 
-var allEmployees = [];
+var allEmployees = []; //empty array to push new generated manager, intern, engineer or employee into
 
 function generateInfo() {
     inquirer.prompt ([
@@ -63,7 +63,7 @@ function generateInfo() {
 
         {
             name: "Role",
-            type: "choices",
+            type: "list",
             choices: [
                 "Employee",
                 "Manager",
