@@ -6,8 +6,6 @@ function managerTemplate (manager) {
     <p class="card-text">Employee Id: ${manager.id}</p>
     <p class="card-text">Office number: ${manager.officeNumber}</p>
     <p class="card-text">Email: ${manager.email}</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
   </div>
 </div>
 `
@@ -21,8 +19,6 @@ function internTemplate (intern) {
     <p class="card-text">Employee Id: ${intern.id}</p>
     <p class="card-text">School: ${intern.school}</p>
     <p class="card-text">Email: ${intern.email}</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
   </div>
 </div>
 `
@@ -35,33 +31,16 @@ function engineerTemplate (engineer) {
     <h6 class="card-subtitle mb-2 text-muted">${engineer.role}</h6>
     <p class="card-text">Employee Id: ${engineer.id}</p>
     <p class="card-text">Github URL: ${engineer.github}</p>
-    <p class="card-text">Email: ${engineer.email}</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <p class="card-text">Email: "${engineer.email}"</p>
   </div>
 </div>`
 }
 
-function employeeTemplate (employee) {
-return `<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">${employee.name}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">${employee.role}</h6>
-    <p class="card-text">Employee Id: ${employee.id}</p>
-    <p class="card-text">Email: ${employee.email}</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
-</div>
-`}
 
 //depending on the role the user chooses in the inquirer prompt's, the switch statement will choose the correct template to input into the HTML template
 
 function renderEmployee(employee) {
 switch (employee.role) {
-    case 'Employee':
-        return employeeTemplate(employee);
-        break;
     case 'Manager':
         return managerTemplate(employee);
         break;

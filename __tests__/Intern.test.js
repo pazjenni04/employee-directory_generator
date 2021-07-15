@@ -33,7 +33,7 @@ describe("Intern class", () => {
     it("Should return the intern's school", () => {
         const obj = new Intern("Jenni", 0, "test@gmail.com", "St. Mary's University")
 
-        expect(obj.github()).toEqual("github.com/testing04");
+        expect(obj.getSchool()).toEqual("St. Mary's University");
     })
 
 })
