@@ -76,7 +76,7 @@ function generateInfo() {
         .then((response) => {
             switch(response.Role) {
                 case 'Manager':
-                    prompt(
+                    inquirer.prompt(
                         {
                             name: "OfficeNumber",
                             type: "input",
@@ -97,7 +97,7 @@ function generateInfo() {
                     break;
 
                 case 'Engineer':
-                    prompt(
+                    inquirer.prompt(
                         {
                             name: "Github",
                             type: "input",
@@ -118,7 +118,7 @@ function generateInfo() {
                     break;
 
                 case 'Intern':
-                    prompt(
+                    inquirer.prompt(
                         {
                             name: "School",
                             type: "input",

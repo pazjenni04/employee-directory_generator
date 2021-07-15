@@ -102,6 +102,7 @@ function htmlTemplate(team) {
 
 //create an if statement that pushes to the array once confirmed if a manager, intern, engineer, or just an employee
 
+
 function generateTeam(allEmployees) {
     let team = []; //empty array to pass generated team templates into
 
