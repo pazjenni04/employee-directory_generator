@@ -25,7 +25,11 @@ and then type the following to download the inquirer package and create a packag
 
 `npm i inquirer`
 
-Once the inquirer package has been downloaded, then the user will proceed in opening a 'New Terminal' in their visual studio code and type the following to initiate the command-line application:
+Along with downloading inquirer, the user will need to also download the jest library in order to execute any testing.
+
+``npm i jest``
+
+Once the inquirer and jest package have been downloaded, then the user will proceed in opening a 'New Terminal' in their visual studio code and type the following to initiate the command-line application:
 
 `node index.js `
 
