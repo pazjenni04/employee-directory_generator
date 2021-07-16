@@ -79,11 +79,11 @@ Once the user has finished answering all needed questions to generate the intern
 
 ## Technologies
 
-*Javascript
-*Node.js
-*CSS
-*Inquirer package
-*Jest package
+* Javascript
+* Node.js
+* CSS
+* Inquirer package
+* Jest package
 
 ## Questions
 
