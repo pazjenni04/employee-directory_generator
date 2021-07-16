@@ -5,7 +5,7 @@ function managerTemplate(manager) {
     <h6 class="card-subtitle mb-2 text-muted">${manager.role}</h6>
     <p class="card-text">Employee Id: ${manager.id}</p>
     <p class="card-text">Office number: ${manager.officeNumber}</p>
-    <p class="card-text">Email: ${manager.email}</p>
+    <p class="card-text">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
   </div>
 </div>
 `;
@@ -18,7 +18,7 @@ function internTemplate(intern) {
     <h6 class="card-subtitle mb-2 text-muted">${intern.role}</h6>
     <p class="card-text">Employee Id: ${intern.id}</p>
     <p class="card-text">School: ${intern.school}</p>
-    <p class="card-text">Email: ${intern.email}</p>
+    <p class="card-text">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
   </div>
 </div>
 `;
@@ -30,8 +30,8 @@ function engineerTemplate(engineer) {
     <h5 class="card-title">${engineer.name}</h5>
     <h6 class="card-subtitle mb-2 text-muted">${engineer.role}</h6>
     <p class="card-text">Employee Id: ${engineer.id}</p>
-    <p class="card-text">Github URL: ${engineer.github}</p>
-    <p class="card-text">Email: "${engineer.email}"</p>
+    <p class="card-text">Github URL: <a href="${engineer.github}">${engineer.github}</a></p>
+    <p class="card-text">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
   </div>
 </div>`;
 }
@@ -63,7 +63,7 @@ function htmlTemplate(team) {
     <!-- stylesheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="./dist/style.css"/>
+    <link rel="stylesheet" href="./src/style.css"/>
   </head>
 
   <body>
@@ -89,7 +89,7 @@ function generateTeam(allEmployees) {
   });
 
   let teamTemplate = htmlTemplate(team); //returns string that has htmlcode in it
-  console.log(teamTemplate);
+  // console.log(teamTemplate);
   return teamTemplate; //gets value from the function
 }
 
