@@ -71,7 +71,7 @@ If the user decides to continue by adding an intern to their directory, then by 
 
 Once the user has finished answering all needed questions to generate the intern card they will be presented with the same prompt "Please choose one of the following positions to continue building your directory." At this point, the user can continue adding multiple engineers and/or interns as needed in order to complete their employee directory or to finish generating their file by choosing "No more employees to add." Once completed, the terminal will console log "Success!" and a new file will be generated with the department name they provided at the beginning of the application as the new file name.
 
-![The following shows the final generated directory](src\images\generated-directory_img.PNG)
+![The following shows the final generated directory](https://raw.githubusercontent.com/pazjenni04/employee-directory_generator/main/src/images/generated-directory_img.PNG)
 
 ## Technologies
 
