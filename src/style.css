@@ -1,0 +1,26 @@
+.jumbotron {
+    font-weight: 20px;
+    background-color: #BAECF2;
+}
+
+.card-title {
+    background-color: #8AE6EC;
+    font-size: 20px;
+
+}
+
+.card-subtitle {
+    font-weight: 15px;
+    color: black;
+}
+
+.card-body {
+    background-color: #E5F4F5;
+    position: relative;
+    display: block;
+}
+.card {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}

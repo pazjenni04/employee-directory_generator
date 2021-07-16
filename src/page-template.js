@@ -1,5 +1,5 @@
-function managerTemplate (manager) { 
-    return `<div class="card" style="width: 18rem;">
+function managerTemplate(manager) {
+  return `<div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">${manager.name}</h5>
     <h6 class="card-subtitle mb-2 text-muted">${manager.role}</h6>
@@ -8,11 +8,11 @@ function managerTemplate (manager) {
     <p class="card-text">Email: ${manager.email}</p>
   </div>
 </div>
-`
+`;
 }
 
-function internTemplate (intern) {
- return `<div class="card" style="width: 18rem;">
+function internTemplate(intern) {
+  return `<div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">${intern.name}</h5>
     <h6 class="card-subtitle mb-2 text-muted">${intern.role}</h6>
@@ -21,11 +21,11 @@ function internTemplate (intern) {
     <p class="card-text">Email: ${intern.email}</p>
   </div>
 </div>
-`
+`;
 }
 
-function engineerTemplate (engineer) { 
-    return `<div class="card" style="width: 18rem;">
+function engineerTemplate(engineer) {
+  return `<div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">${engineer.name}</h5>
     <h6 class="card-subtitle mb-2 text-muted">${engineer.role}</h6>
@@ -33,29 +33,28 @@ function engineerTemplate (engineer) {
     <p class="card-text">Github URL: ${engineer.github}</p>
     <p class="card-text">Email: "${engineer.email}"</p>
   </div>
-</div>`
+</div>`;
 }
-
 
 //depending on the role the user chooses in the inquirer prompt's, the switch statement will choose the correct template to input into the HTML template
 
 function renderEmployee(employee) {
-switch (employee.role) {
-    case 'Manager':
-        return managerTemplate(employee);
-        break;
-    case 'Intern':
-        return internTemplate(employee);
-        break;
-    case 'Engineer':
-        return engineerTemplate(employee);
-        break;
-};
-};
+  switch (employee.role) {
+    case "Manager":
+      return managerTemplate(employee);
+      break;
+    case "Intern":
+      return internTemplate(employee);
+      break;
+    case "Engineer":
+      return engineerTemplate(employee);
+      break;
+  }
+}
 
 //page template for the cards to display onto
-function htmlTemplate(team) { 
-    return `
+function htmlTemplate(team) {
+  return `
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -76,27 +75,22 @@ function htmlTemplate(team) {
 </div>
  ${team}
 
-</body>`
+</body>`;
 }
 
 //create an if statement that pushes to the array once confirmed if a manager, intern, engineer, or just an employee
 
-
 function generateTeam(allEmployees) {
-    let team = []; //empty array to pass generated team templates into
+  let team = []; //empty array to pass generated team templates into
 
-    allEmployees.forEach(employee => {
-        let template = renderEmployee(employee); //is rendering the employee template into a variable
-        team.push(template); //will push the template variable into the team array
-    });
+  allEmployees.forEach((employee) => {
+    let template = renderEmployee(employee); //is rendering the employee template into a variable
+    team.push(template); //will push the template variable into the team array
+  });
 
-    let teamTemplate = htmlTemplate(team); //returns string that has htmlcode in it
-    console.log(teamTemplate);
-    return teamTemplate; //gets value from the function
+  let teamTemplate = htmlTemplate(team); //returns string that has htmlcode in it
+  console.log(teamTemplate);
+  return teamTemplate; //gets value from the function
 }
-
-
-
-
 
 module.exports = generateTeam;
